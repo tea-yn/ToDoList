@@ -14,27 +14,45 @@ namespace PPF_TodoApplication
 {
     public partial class ToDoList : Form
     {
-        private BindingList<TodoItem> todoList = new BindingList<TodoItem>();
-        string path = "AppData/Todo.json";
+        //基本のデータ管理はtodoDateTableで行う
+        //todoListはJson保存用
+
+
+        private BindingList<TodoItem> todoList = new BindingList<TodoItem>();   //TodoItem型のバウンドリスト
+        private DataTable todoDateTable = new DataTable();
+        string path = "AppData/Todo.json";  //Jsonファイルの保存先Pathを指定
 
 
         public ToDoList()
         {
             InitializeComponent();
-            todoList = LoadTodoItemsFromJson("AppData/Todo.json"); // フォーム起動時にJsonファイルを読み込み
+            //InitializeDataTable();  //DateTableを初期化
+            //GV_List.DataSource = todoDateTable;
+            todoList = LoadTodoItemsFromJson("AppData/Todo.json"); // フォーム起動時にJsonファイルをDateTableに読み込み
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             GV_List.DataSource = todoList; // DataGridViewにリストをバインド
             GV_List.AutoGenerateColumns = true;
-            GV_List.DataSource = todoList;
+            
         }
 
         private void CB_Task1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
+
+        /// <summary>
+        /// DataTable（todoDateTable）の初期化
+        /// </summary>
+        private void InitializeDataTable()
+        {
+            todoDateTable.Columns.Add("IsCompleted", typeof(bool));
+            todoDateTable.Columns.Add("LimitDay", typeof(DateTime));
+            todoDateTable.Columns.Add("Todo", typeof(string));
+        }
+
 
         /// <summary>
         /// ToDoをtodoListに追加
@@ -49,10 +67,12 @@ namespace PPF_TodoApplication
                 LimitDay = this.TM_LimitDay.Value,
                 Todo = this.TB_Todo.Text
             };
-            todoList.Add(newItem);
+            todoList.Add(newItem);  //todoListに追加
+            //todoDateTable.Rows.Add(newItem.IsCompleted, newItem.LimitDay, newItem.Todo);    //DateTableに追加
+
             Console.WriteLine("FilePath: " + path);
-            Console.WriteLine("LimitDay: " + newItem.LimitDay);
-            Console.WriteLine("Todo: " + newItem.Todo);
+            Console.WriteLine("期限: " + newItem.LimitDay);
+            Console.WriteLine("やること: " + newItem.Todo);
             Console.WriteLine("登録をクリック");
         }
 
@@ -63,19 +83,20 @@ namespace PPF_TodoApplication
         /// <param name="e"></param>
         private void DeleteButtonClicked(object sender, EventArgs e)
         {
-            if (GV_List.CurrentCell != null)    //セルがNull出なければ実行
+            if (GV_List.CurrentCell != null)    //セルがNullでなければ実行
             {
                 int row = GV_List.CurrentCell.RowIndex;
                 todoList.RemoveAt(row);
+                //todoDateTable.Rows.RemoveAt(row);
                 Console.WriteLine("削除成功!");
             }
             else { 
-                Console.WriteLine("削除失敗……");
+                Console.WriteLine("削除失敗");
             }
         }
 
         /// <summary>
-        /// TodoリストをJSONに保存するための準備
+        /// TodoリストをJSONに保存するためのメソッドを呼び出し
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -96,15 +117,14 @@ namespace PPF_TodoApplication
             {
                 string jsonString = JsonSerializer.Serialize(todoItems, options);
                 File.WriteAllText(filePath, jsonString);
-                Console.WriteLine("ToDoリストを保存しました。");
+                Console.WriteLine("ToDoリストを保存!");
                 Console.WriteLine("FilePath: " + filePath);
-                Console.WriteLine("保存内容:");
+                Console.WriteLine("保存内容:" + todoItems);
                 Console.WriteLine(File.ReadAllText(filePath)); 
             }
             catch (Exception ex)    //例外処理
             {
-                Console.WriteLine($"ToDoリストの保存に失敗しました: {ex.Message}");
-                // 必要に応じて、エラーメッセージをユーザーに表示するなどのUI操作を行う
+                Console.WriteLine($"ToDoリストの保存に失敗: {ex.Message}");
                 MessageBox.Show($"保存に失敗しました: {ex.Message}", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

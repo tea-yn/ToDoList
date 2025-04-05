@@ -6,6 +6,9 @@ using System.Text.Json;
 
 namespace PPF_TodoApplication
 {
+    /// <summary>
+    /// TodoItemModel
+    /// </summary>
     public class TodoItem
     {
         public string Todo {  get; set; }

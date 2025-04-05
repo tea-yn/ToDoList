@@ -1,34 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\creative\\PPF_TodoApplication\\",
+  "WorkspaceRootPath": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|c:\\creative\\ppf_todoapplication\\ppf_todoapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|c:\\creative\\git\\github\\todolist\\ppf_todoapplication\\ppf_todoapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:ppf_todoapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\PPF_TodoApplication\\ppf_todoapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\ppf_todoapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:ppf_todoapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\PPF_TodoApplication\\ppf_todoapplication\\tododateset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:ppf_todoapplication\\tododateset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:PPF_TodoApplication\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\PPF_TodoApplication\\ppf_todoapplication\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:ppf_todoapplication\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:PPF_TodoApplication\\TodoDateSet.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\PPF_TodoApplication\\ppf_todoapplication\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:ppf_todoapplication\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:PPF_TodoApplication\\TodoItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\PPF_TodoApplication\\ppf_todoapplication\\tododateset.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:ppf_todoapplication\\tododateset.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:PPF_TodoApplication\\TodoDateSet.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\PPF_TodoApplication\\ppf_todoapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:ppf_todoapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:PPF_TodoApplication\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,86 +50,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TodoItem.cs",
-              "DocumentMoniker": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\TodoItem.cs",
+              "DocumentMoniker": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoItem.cs",
               "RelativeDocumentMoniker": "PPF_TodoApplication\\TodoItem.cs",
-              "ToolTip": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\TodoItem.cs",
+              "ToolTip": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoItem.cs",
               "RelativeToolTip": "PPF_TodoApplication\\TodoItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T07:31:11.505Z"
+              "WhenOpened": "2025-04-03T07:31:11.505Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs",
+              "DocumentMoniker": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs",
               "RelativeDocumentMoniker": "PPF_TodoApplication\\Form1.cs",
-              "ToolTip": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs",
+              "ToolTip": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs",
               "RelativeToolTip": "PPF_TodoApplication\\Form1.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T08:12:43.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\Program.cs",
+              "DocumentMoniker": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Program.cs",
               "RelativeDocumentMoniker": "PPF_TodoApplication\\Program.cs",
-              "ToolTip": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\Program.cs",
+              "ToolTip": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Program.cs",
               "RelativeToolTip": "PPF_TodoApplication\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T08:12:17.686Z"
+              "WhenOpened": "2025-04-03T08:12:17.686Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "TodoDateSet.xsd",
-              "DocumentMoniker": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.xsd",
+              "DocumentMoniker": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.xsd",
               "RelativeDocumentMoniker": "PPF_TodoApplication\\TodoDateSet.xsd",
-              "ToolTip": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.xsd",
+              "ToolTip": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.xsd",
               "RelativeToolTip": "PPF_TodoApplication\\TodoDateSet.xsd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2025-04-02T08:56:50.021Z"
+              "WhenOpened": "2025-04-02T08:56:50.021Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
-              "DocumentMoniker": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs",
+              "DocumentMoniker": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs",
               "RelativeDocumentMoniker": "PPF_TodoApplication\\Form1.cs",
-              "ToolTip": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
+              "ToolTip": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
               "RelativeToolTip": "PPF_TodoApplication\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T05:52:36.157Z"
+              "WhenOpened": "2025-04-02T05:52:36.157Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "TodoDateSet.Designer.cs",
-              "DocumentMoniker": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.Designer.cs",
+              "DocumentMoniker": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.Designer.cs",
               "RelativeDocumentMoniker": "PPF_TodoApplication\\TodoDateSet.Designer.cs",
-              "ToolTip": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.Designer.cs",
+              "ToolTip": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoDateSet.Designer.cs",
               "RelativeToolTip": "PPF_TodoApplication\\TodoDateSet.Designer.cs",
               "ViewState": "AgIAAHEBAAAAAAAAAAArwH0BAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T10:06:48.714Z"
+              "WhenOpened": "2025-04-02T10:06:48.714Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.Designer.cs",
+              "DocumentMoniker": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "PPF_TodoApplication\\Form1.Designer.cs",
-              "ToolTip": "C:\\creative\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.Designer.cs",
+              "ToolTip": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.Designer.cs",
               "RelativeToolTip": "PPF_TodoApplication\\Form1.Designer.cs",
               "ViewState": "AgIAAOUAAAAAAAAAAAAzwO8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:31:07.047Z"
+              "WhenOpened": "2025-04-02T08:31:07.047Z",
+              "EditorCaption": ""
             }
           ]
         }

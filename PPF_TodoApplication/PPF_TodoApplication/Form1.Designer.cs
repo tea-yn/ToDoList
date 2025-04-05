@@ -34,7 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.GV_List = new System.Windows.Forms.DataGridView();
+            this.完了DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.期限DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.やることDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.todoDateTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.todoDateSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.todoDateSet = new PPF_TodoApplication.TodoDateSet();
             this.LB_Limit = new System.Windows.Forms.Label();
             this.TB_Todo = new System.Windows.Forms.TextBox();
             this.LB_Todo = new System.Windows.Forms.Label();
@@ -42,11 +47,7 @@
             this.BT_Delete = new System.Windows.Forms.Button();
             this.BT_Save = new System.Windows.Forms.Button();
             this.TM_LimitDay = new System.Windows.Forms.DateTimePicker();
-            this.todoDateSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.todoDateSet = new PPF_TodoApplication.TodoDateSet();
-            this.完了DataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.期限DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.やることDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TodolistView = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.GV_List)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.todoDateTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.todoDateSetBindingSource)).BeginInit();
@@ -107,10 +108,41 @@
             this.GV_List.Size = new System.Drawing.Size(667, 500);
             this.GV_List.TabIndex = 1;
             // 
+            // 完了DataGridViewCheckBoxColumn
+            // 
+            this.完了DataGridViewCheckBoxColumn.DataPropertyName = "完了";
+            this.完了DataGridViewCheckBoxColumn.HeaderText = "完了";
+            this.完了DataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.完了DataGridViewCheckBoxColumn.Name = "完了DataGridViewCheckBoxColumn";
+            // 
+            // 期限DataGridViewTextBoxColumn
+            // 
+            this.期限DataGridViewTextBoxColumn.DataPropertyName = "期限";
+            this.期限DataGridViewTextBoxColumn.HeaderText = "期限";
+            this.期限DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.期限DataGridViewTextBoxColumn.Name = "期限DataGridViewTextBoxColumn";
+            // 
+            // やることDataGridViewTextBoxColumn
+            // 
+            this.やることDataGridViewTextBoxColumn.DataPropertyName = "やること";
+            this.やることDataGridViewTextBoxColumn.HeaderText = "やること";
+            this.やることDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.やることDataGridViewTextBoxColumn.Name = "やることDataGridViewTextBoxColumn";
+            // 
             // todoDateTableBindingSource
             // 
             this.todoDateTableBindingSource.DataMember = "TodoDateTable";
             this.todoDateTableBindingSource.DataSource = this.todoDateSetBindingSource;
+            // 
+            // todoDateSetBindingSource
+            // 
+            this.todoDateSetBindingSource.DataSource = this.todoDateSet;
+            this.todoDateSetBindingSource.Position = 0;
+            // 
+            // todoDateSet
+            // 
+            this.todoDateSet.DataSetName = "TodoDateSet";
+            this.todoDateSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // LB_Limit
             // 
@@ -190,42 +222,22 @@
             this.TM_LimitDay.Size = new System.Drawing.Size(227, 22);
             this.TM_LimitDay.TabIndex = 9;
             // 
-            // todoDateSetBindingSource
+            // TodolistView
             // 
-            this.todoDateSetBindingSource.DataSource = this.todoDateSet;
-            this.todoDateSetBindingSource.Position = 0;
-            // 
-            // todoDateSet
-            // 
-            this.todoDateSet.DataSetName = "TodoDateSet";
-            this.todoDateSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // 完了DataGridViewCheckBoxColumn
-            // 
-            this.完了DataGridViewCheckBoxColumn.DataPropertyName = "完了";
-            this.完了DataGridViewCheckBoxColumn.HeaderText = "完了";
-            this.完了DataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.完了DataGridViewCheckBoxColumn.Name = "完了DataGridViewCheckBoxColumn";
-            // 
-            // 期限DataGridViewTextBoxColumn
-            // 
-            this.期限DataGridViewTextBoxColumn.DataPropertyName = "期限";
-            this.期限DataGridViewTextBoxColumn.HeaderText = "期限";
-            this.期限DataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.期限DataGridViewTextBoxColumn.Name = "期限DataGridViewTextBoxColumn";
-            // 
-            // やることDataGridViewTextBoxColumn
-            // 
-            this.やることDataGridViewTextBoxColumn.DataPropertyName = "やること";
-            this.やることDataGridViewTextBoxColumn.HeaderText = "やること";
-            this.やることDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.やることDataGridViewTextBoxColumn.Name = "やることDataGridViewTextBoxColumn";
+            this.TodolistView.HideSelection = false;
+            this.TodolistView.Location = new System.Drawing.Point(279, 140);
+            this.TodolistView.Name = "TodolistView";
+            this.TodolistView.Size = new System.Drawing.Size(441, 310);
+            this.TodolistView.TabIndex = 10;
+            this.TodolistView.UseCompatibleStateImageBehavior = false;
+            this.TodolistView.View = System.Windows.Forms.View.Details;
             // 
             // ToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 576);
+            this.Controls.Add(this.TodolistView);
             this.Controls.Add(this.TM_LimitDay);
             this.Controls.Add(this.BT_Save);
             this.Controls.Add(this.BT_Delete);
@@ -262,6 +274,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn 完了DataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn 期限DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn やることDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ListView TodolistView;
     }
 }
 
