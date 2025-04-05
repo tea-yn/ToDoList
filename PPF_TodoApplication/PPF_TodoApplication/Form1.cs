@@ -45,9 +45,11 @@ namespace PPF_TodoApplication
         {
             TodoListView.View = View.Details;   //表形式
             TodoListView.Columns.Add("完了",-2,HorizontalAlignment.Center);
-            TodoListView.Columns.Add("期限", -2, HorizontalAlignment.Center);
-            TodoListView.Columns.Add("すること", -2, HorizontalAlignment.Center);
+            TodoListView.Columns.Add("期限", 150, HorizontalAlignment.Center);
+            TodoListView.Columns.Add("すること", 300, HorizontalAlignment.Center);
             TodoListView.FullRowSelect = true;      // 行全体を選択対象にする
+            TodoListView.CheckBoxes = true; //チェックボックスを表示する
+            TodoListView.ItemCheck += CheckListViewItem;
         }
 
         /// <summary>
@@ -58,7 +60,7 @@ namespace PPF_TodoApplication
             TodoListView.Items.Clear(); //初期化しておく
             foreach (var item in todoList)
             {
-                var listItem = new ListViewItem(item.IsCompleted ? "✓" : "");
+                var listItem = new ListViewItem(item.IsCompleted ? "" : "");
                 listItem.SubItems.Add(item.LimitDay.ToShortDateString());
                 listItem.SubItems.Add(item.Todo);
                 TodoListView.Items.Add(listItem);
@@ -160,5 +162,25 @@ namespace PPF_TodoApplication
             return JsonSerializer.Deserialize<BindingList<TodoItem>>(jsonString);
         }
 
+        /// <summary>
+        /// リストのチェックボックスの状態を管理するイベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CheckListViewItem(object sender, ItemCheckEventArgs e)
+        {
+            // クリックしたアイテムのインデックスを取得
+            int index = e.Index;
+            bool isChecked = e.NewValue == CheckState.Checked;
+
+            // todoListの該当アイテムを更新
+            todoList[index].IsCompleted = isChecked;
+            Console.WriteLine("選択した列番号：　" + index);
+            Console.WriteLine("チェック状態：　" + isChecked);
+
+            //ここでチェックしたら取り消し線を付ける
+
+            UpdateListView();   //リストUI更新
+        }
     }
 }
