@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TodoDateSet" targetNamespace="http://tempuri.org/TodoDateSet.xsd" xmlns:mstns="http://tempuri.org/TodoDateSet.xsd" xmlns="http://tempuri.org/TodoDateSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TodoDateSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="TodoDateSet" msprop:Generator_DataSetName="TodoDateSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="todoDateTable" msdata:CaseSensitive="False" msprop:Generator_RowEvHandlerName="todoDateTableRowChangeEventHandler" msprop:Generator_RowDeletedName="todoDateTableRowDeleted" msprop:Generator_RowDeletingName="todoDateTableRowDeleting" msprop:Generator_RowEvArgName="todoDateTableRowChangeEvent" msprop:Generator_TablePropName="todoDateTable" msprop:Generator_RowChangedName="todoDateTableRowChanged" msprop:Generator_RowChangingName="todoDateTableRowChanging" msprop:Generator_TableClassName="todoDateTableDataTable" msprop:Generator_RowClassName="todoDateTableRow" msprop:Generator_TableVarName="tabletodoDateTable" msprop:Generator_UserTableName="todoDateTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="完了" msprop:Generator_ColumnPropNameInRow="完了" msprop:Generator_ColumnPropNameInTable="完了Column" msprop:Generator_ColumnVarNameInTable="column完了" msprop:Generator_UserColumnName="完了" type="xs:boolean" minOccurs="0" />
+              <xs:element name="期限" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="期限" msprop:Generator_ColumnPropNameInTable="期限Column" msprop:Generator_ColumnVarNameInTable="column期限" msprop:Generator_UserColumnName="期限" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="やること" msprop:Generator_ColumnPropNameInRow="やること" msprop:Generator_ColumnPropNameInTable="やることColumn" msprop:Generator_ColumnVarNameInTable="columnやること" msprop:Generator_UserColumnName="やること" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
