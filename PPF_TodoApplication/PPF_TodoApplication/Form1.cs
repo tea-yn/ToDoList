@@ -9,32 +9,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.Json;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PPF_TodoApplication
 {
     public partial class ToDoList : Form
     {
-        //基本のデータ管理はtodoDateTableで行う
-        //todoListはJson保存用
-
-
         private BindingList<TodoItem> todoList = new BindingList<TodoItem>();   //TodoItem型のバウンドリスト
-        private DataTable todoDateTable = new DataTable();
         string path = "AppData/Todo.json";  //Jsonファイルの保存先Pathを指定
 
 
         public ToDoList()
         {
             InitializeComponent();
-            //InitializeDataTable();  //DateTableを初期化
-            //GV_List.DataSource = todoDateTable;
-            todoList = LoadTodoItemsFromJson("AppData/Todo.json"); // フォーム起動時にJsonファイルをDateTableに読み込み
+            SetupListView();
+            todoList = LoadTodoItemsFromJson("AppData/Todo.json"); // フォーム起動時にJsonファイルをtodoListに読み込み
+            UpdateListView();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GV_List.DataSource = todoList; // DataGridViewにリストをバインド
-            GV_List.AutoGenerateColumns = true;
+            
             
         }
 
@@ -44,15 +39,31 @@ namespace PPF_TodoApplication
         }
 
         /// <summary>
-        /// DataTable（todoDateTable）の初期化
+        /// TodoListViewの初期設定
         /// </summary>
-        private void InitializeDataTable()
+        private void SetupListView()
         {
-            todoDateTable.Columns.Add("IsCompleted", typeof(bool));
-            todoDateTable.Columns.Add("LimitDay", typeof(DateTime));
-            todoDateTable.Columns.Add("Todo", typeof(string));
+            TodoListView.View = View.Details;   //表形式
+            TodoListView.Columns.Add("完了",-2,HorizontalAlignment.Center);
+            TodoListView.Columns.Add("期限", -2, HorizontalAlignment.Center);
+            TodoListView.Columns.Add("すること", -2, HorizontalAlignment.Center);
+            TodoListView.FullRowSelect = true;      // 行全体を選択対象にする
         }
 
+        /// <summary>
+        /// todoListから取得してTodoListViewの内容を更新
+        /// </summary>
+        private void UpdateListView()
+        {
+            TodoListView.Items.Clear(); //初期化しておく
+            foreach (var item in todoList)
+            {
+                var listItem = new ListViewItem(item.IsCompleted ? "✓" : "");
+                listItem.SubItems.Add(item.LimitDay.ToShortDateString());
+                listItem.SubItems.Add(item.Todo);
+                TodoListView.Items.Add(listItem);
+            }
+        }
 
         /// <summary>
         /// ToDoをtodoListに追加
@@ -61,6 +72,8 @@ namespace PPF_TodoApplication
         /// <param name="e"></param>
         private void AddButtonClicked(object sender, EventArgs e)
         {
+            Console.WriteLine("登録をクリック");
+
             TodoItem newItem = new TodoItem
             {
                 IsCompleted = false, //追加直後は完了していないのでfalse
@@ -68,12 +81,11 @@ namespace PPF_TodoApplication
                 Todo = this.TB_Todo.Text
             };
             todoList.Add(newItem);  //todoListに追加
-            //todoDateTable.Rows.Add(newItem.IsCompleted, newItem.LimitDay, newItem.Todo);    //DateTableに追加
+            UpdateListView();
 
             Console.WriteLine("FilePath: " + path);
             Console.WriteLine("期限: " + newItem.LimitDay);
             Console.WriteLine("やること: " + newItem.Todo);
-            Console.WriteLine("登録をクリック");
         }
 
         /// <summary>
@@ -83,11 +95,11 @@ namespace PPF_TodoApplication
         /// <param name="e"></param>
         private void DeleteButtonClicked(object sender, EventArgs e)
         {
-            if (GV_List.CurrentCell != null)    //セルがNullでなければ実行
+            if (TodoListView.SelectedIndices.Count > 0)    //選択したセルが1以上であれば
             {
-                int row = GV_List.CurrentCell.RowIndex;
-                todoList.RemoveAt(row);
-                //todoDateTable.Rows.RemoveAt(row);
+                int num = TodoListView.SelectedIndices[0];
+                todoList.RemoveAt(num);
+                UpdateListView();
                 Console.WriteLine("削除成功!");
             }
             else { 

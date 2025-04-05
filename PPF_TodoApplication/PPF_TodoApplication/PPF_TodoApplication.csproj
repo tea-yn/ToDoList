@@ -91,6 +91,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TodoDateSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TodoList.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
