@@ -47,6 +47,9 @@ namespace PPF_TodoApplication
             TodoListView.View = View.Details;   //表形式
             TodoListView.FullRowSelect = true;      // 行全体を選択対象にする
             TodoListView.CheckBoxes = true; //チェックボックスを表示する
+
+            TodoListView.BackColor = Color.Ivory;
+
             TodoListView.Columns.Add("完了",-2,HorizontalAlignment.Center);
             TodoListView.Columns.Add("期限", 150, HorizontalAlignment.Center);
             TodoListView.Columns.Add("すること", 300, HorizontalAlignment.Center);

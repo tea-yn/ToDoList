@@ -63,8 +63,9 @@
             // LB_Limit
             // 
             this.LB_Limit.AutoSize = true;
+            this.LB_Limit.BackColor = System.Drawing.Color.Transparent;
             this.LB_Limit.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.LB_Limit.Location = new System.Drawing.Point(763, 52);
+            this.LB_Limit.Location = new System.Drawing.Point(164, 540);
             this.LB_Limit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_Limit.Name = "LB_Limit";
             this.LB_Limit.Size = new System.Drawing.Size(49, 20);
@@ -74,8 +75,9 @@
             // 
             // TB_Todo
             // 
+            this.TB_Todo.BackColor = System.Drawing.Color.Ivory;
             this.TB_Todo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TB_Todo.Location = new System.Drawing.Point(767, 164);
+            this.TB_Todo.Location = new System.Drawing.Point(168, 651);
             this.TB_Todo.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Todo.Name = "TB_Todo";
             this.TB_Todo.Size = new System.Drawing.Size(223, 27);
@@ -84,8 +86,9 @@
             // LB_Todo
             // 
             this.LB_Todo.AutoSize = true;
+            this.LB_Todo.BackColor = System.Drawing.Color.Transparent;
             this.LB_Todo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.LB_Todo.Location = new System.Drawing.Point(763, 140);
+            this.LB_Todo.Location = new System.Drawing.Point(164, 627);
             this.LB_Todo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_Todo.Name = "LB_Todo";
             this.LB_Todo.Size = new System.Drawing.Size(68, 20);
@@ -95,44 +98,48 @@
             // 
             // BT_Add
             // 
+            this.BT_Add.BackColor = System.Drawing.Color.Ivory;
             this.BT_Add.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.BT_Add.Location = new System.Drawing.Point(767, 406);
+            this.BT_Add.Location = new System.Drawing.Point(499, 555);
             this.BT_Add.Margin = new System.Windows.Forms.Padding(4);
             this.BT_Add.Name = "BT_Add";
             this.BT_Add.Size = new System.Drawing.Size(100, 38);
             this.BT_Add.TabIndex = 6;
             this.BT_Add.Text = "登録";
-            this.BT_Add.UseVisualStyleBackColor = true;
+            this.BT_Add.UseVisualStyleBackColor = false;
             this.BT_Add.Click += new System.EventHandler(this.AddButtonClicked);
             // 
             // BT_Delete
             // 
+            this.BT_Delete.BackColor = System.Drawing.Color.Ivory;
             this.BT_Delete.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.BT_Delete.Location = new System.Drawing.Point(891, 406);
+            this.BT_Delete.Location = new System.Drawing.Point(623, 555);
             this.BT_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.BT_Delete.Name = "BT_Delete";
             this.BT_Delete.Size = new System.Drawing.Size(100, 38);
             this.BT_Delete.TabIndex = 7;
             this.BT_Delete.Text = "削除";
-            this.BT_Delete.UseVisualStyleBackColor = true;
+            this.BT_Delete.UseVisualStyleBackColor = false;
             this.BT_Delete.Click += new System.EventHandler(this.DeleteButtonClicked);
             // 
             // BT_Save
             // 
+            this.BT_Save.BackColor = System.Drawing.Color.Ivory;
             this.BT_Save.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.BT_Save.Location = new System.Drawing.Point(767, 469);
+            this.BT_Save.Location = new System.Drawing.Point(499, 618);
             this.BT_Save.Margin = new System.Windows.Forms.Padding(4);
             this.BT_Save.Name = "BT_Save";
             this.BT_Save.Size = new System.Drawing.Size(224, 56);
             this.BT_Save.TabIndex = 8;
             this.BT_Save.Text = "保存";
-            this.BT_Save.UseVisualStyleBackColor = true;
+            this.BT_Save.UseVisualStyleBackColor = false;
             this.BT_Save.Click += new System.EventHandler(this.SaveButtonClicked);
             // 
             // TM_LimitDay
             // 
+            this.TM_LimitDay.CalendarMonthBackground = System.Drawing.Color.Ivory;
             this.TM_LimitDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.TM_LimitDay.Location = new System.Drawing.Point(763, 76);
+            this.TM_LimitDay.Location = new System.Drawing.Point(164, 564);
             this.TM_LimitDay.Margin = new System.Windows.Forms.Padding(4);
             this.TM_LimitDay.Name = "TM_LimitDay";
             this.TM_LimitDay.Size = new System.Drawing.Size(227, 22);
@@ -140,10 +147,12 @@
             // 
             // TodoListView
             // 
+            this.TodoListView.BackColor = System.Drawing.SystemColors.Window;
+            this.TodoListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TodoListView.HideSelection = false;
-            this.TodoListView.Location = new System.Drawing.Point(34, 37);
+            this.TodoListView.Location = new System.Drawing.Point(110, 12);
             this.TodoListView.Name = "TodoListView";
-            this.TodoListView.Size = new System.Drawing.Size(676, 488);
+            this.TodoListView.Size = new System.Drawing.Size(666, 510);
             this.TodoListView.TabIndex = 10;
             this.TodoListView.UseCompatibleStateImageBehavior = false;
             this.TodoListView.View = System.Windows.Forms.View.Details;
@@ -152,7 +161,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 576);
+            this.BackgroundImage = global::PPF_TodoApplication.Properties.Resources.pultiyPAKU7217_TP_V4;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(978, 745);
             this.Controls.Add(this.TodoListView);
             this.Controls.Add(this.TM_LimitDay);
             this.Controls.Add(this.BT_Save);

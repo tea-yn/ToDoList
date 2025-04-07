@@ -63,6 +63,16 @@ namespace PPF_TodoApplication.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap pultiyPAKU7217_TP_V4 {
+            get {
+                object obj = ResourceManager.GetObject("pultiyPAKU7217_TP_V4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap チェックボックスのフリーアイコン {
             get {
                 object obj = ResourceManager.GetObject("チェックボックスのフリーアイコン", resourceCulture);

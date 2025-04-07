@@ -136,5 +136,8 @@
   <ItemGroup>
     <Folder Include="AppData\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pultiyPAKU7217_TP_V4.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
