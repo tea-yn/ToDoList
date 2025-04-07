@@ -18,6 +18,7 @@ namespace PPF_TodoApplication
     {
         private BindingList<TodoItem> todoList = new BindingList<TodoItem>();   //TodoItem型のバウンドリスト
         string path = "AppData/Todo.json";  //Jsonファイルの保存先Pathを指定
+        private bool isDisplayed = true;    //完了したアイテムの表示・非表示（初期設定は表示する）
 
 
         public ToDoList()
@@ -65,22 +66,31 @@ namespace PPF_TodoApplication
             TodoListView.Items.Clear(); //初期化しておく
             foreach (var item in todoList)
             {
-                var listItem = new ListViewItem("");
+                if (!isDisplayed && item.IsCompleted)   //非表示かつ完了
+                {
+                    continue;
+                }
+
+                //ListViewにTodoListの中身を反映させる
+                var listItem = new ListViewItem();
                 listItem.Checked = item.IsCompleted;
                 listItem.SubItems.Add(item.LimitDay.ToShortDateString());
                 listItem.SubItems.Add(item.Todo);
 
-                
-                if (item.IsCompleted)
+
+                if (isDisplayed && item.IsCompleted)   //表示かつ完了
                 {
                     //ここで取り消し線の処理を行う
                     TodoListView.ForeColor = Color.LightGray;
                     TodoListView.Font = new Font(TodoListView.Font, FontStyle.Strikeout);
-                }else
+                }
+                else
                 {
                     TodoListView.ForeColor = Color.Black;
                     TodoListView.Font = new Font(TodoListView.Font, FontStyle.Regular);
                 }
+
+                listItem.Tag = item;    //Tagにitemを保持させる
 
                 //ListViewにTodoListの内容を反映
                 TodoListView.Items.Add(listItem);
@@ -199,13 +209,6 @@ namespace PPF_TodoApplication
             todoList[index].IsCompleted = isChecked;
 
             //ここで取り消し線の処理を行う
-            /*
-            var listViewItem = TodoListView.Items[index];
-
-            Font currentFont = listViewItem.SubItems[2].Font; 
-            Font newFont = new Font(currentFont, isChecked ? FontStyle.Strikeout : FontStyle.Regular);
-            listViewItem.SubItems[2].Font = newFont;
-            */
             if (isChecked)  //完了状態の場合
             { 
                 TodoListView.Items[index].ForeColor = Color.LightGray;
@@ -219,6 +222,21 @@ namespace PPF_TodoApplication
 
             Console.WriteLine("選択した列番号：　" + index);
             Console.WriteLine("完了：　" + isChecked);
+        }
+
+        /// <summary>
+        /// 完了したアイテムの表示・非表示
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DisplayButtonClicked(object sender, EventArgs e)
+        {
+            isDisplayed = !isDisplayed; //表示・非表示の切り替え
+            // ボタンのテキストを切り替え
+            BT_Display.Text = isDisplayed ? "完了したToDoを表示しない" : "完了したToDoを表示する";
+
+            //データを更新する
+            UpdateListView();
         }
     }
 }

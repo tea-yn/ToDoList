@@ -40,6 +40,7 @@
             this.BT_Save = new System.Windows.Forms.Button();
             this.TM_LimitDay = new System.Windows.Forms.DateTimePicker();
             this.TodoListView = new System.Windows.Forms.ListView();
+            this.BT_Display = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.todoDateTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.todoDateSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.todoDateSet)).BeginInit();
@@ -65,7 +66,7 @@
             this.LB_Limit.AutoSize = true;
             this.LB_Limit.BackColor = System.Drawing.Color.Transparent;
             this.LB_Limit.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.LB_Limit.Location = new System.Drawing.Point(164, 540);
+            this.LB_Limit.Location = new System.Drawing.Point(209, 552);
             this.LB_Limit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_Limit.Name = "LB_Limit";
             this.LB_Limit.Size = new System.Drawing.Size(49, 20);
@@ -77,7 +78,7 @@
             // 
             this.TB_Todo.BackColor = System.Drawing.Color.Ivory;
             this.TB_Todo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TB_Todo.Location = new System.Drawing.Point(168, 651);
+            this.TB_Todo.Location = new System.Drawing.Point(213, 635);
             this.TB_Todo.Margin = new System.Windows.Forms.Padding(4);
             this.TB_Todo.Name = "TB_Todo";
             this.TB_Todo.Size = new System.Drawing.Size(223, 27);
@@ -88,7 +89,7 @@
             this.LB_Todo.AutoSize = true;
             this.LB_Todo.BackColor = System.Drawing.Color.Transparent;
             this.LB_Todo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.LB_Todo.Location = new System.Drawing.Point(164, 627);
+            this.LB_Todo.Location = new System.Drawing.Point(209, 611);
             this.LB_Todo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LB_Todo.Name = "LB_Todo";
             this.LB_Todo.Size = new System.Drawing.Size(68, 20);
@@ -100,7 +101,7 @@
             // 
             this.BT_Add.BackColor = System.Drawing.Color.Ivory;
             this.BT_Add.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.BT_Add.Location = new System.Drawing.Point(499, 555);
+            this.BT_Add.Location = new System.Drawing.Point(212, 678);
             this.BT_Add.Margin = new System.Windows.Forms.Padding(4);
             this.BT_Add.Name = "BT_Add";
             this.BT_Add.Size = new System.Drawing.Size(100, 38);
@@ -113,7 +114,7 @@
             // 
             this.BT_Delete.BackColor = System.Drawing.Color.Ivory;
             this.BT_Delete.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.BT_Delete.Location = new System.Drawing.Point(623, 555);
+            this.BT_Delete.Location = new System.Drawing.Point(336, 678);
             this.BT_Delete.Margin = new System.Windows.Forms.Padding(4);
             this.BT_Delete.Name = "BT_Delete";
             this.BT_Delete.Size = new System.Drawing.Size(100, 38);
@@ -126,7 +127,7 @@
             // 
             this.BT_Save.BackColor = System.Drawing.Color.Ivory;
             this.BT_Save.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.BT_Save.Location = new System.Drawing.Point(499, 618);
+            this.BT_Save.Location = new System.Drawing.Point(543, 646);
             this.BT_Save.Margin = new System.Windows.Forms.Padding(4);
             this.BT_Save.Name = "BT_Save";
             this.BT_Save.Size = new System.Drawing.Size(224, 56);
@@ -139,7 +140,7 @@
             // 
             this.TM_LimitDay.CalendarMonthBackground = System.Drawing.Color.Ivory;
             this.TM_LimitDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.TM_LimitDay.Location = new System.Drawing.Point(164, 564);
+            this.TM_LimitDay.Location = new System.Drawing.Point(209, 576);
             this.TM_LimitDay.Margin = new System.Windows.Forms.Padding(4);
             this.TM_LimitDay.Name = "TM_LimitDay";
             this.TM_LimitDay.Size = new System.Drawing.Size(227, 22);
@@ -150,12 +151,24 @@
             this.TodoListView.BackColor = System.Drawing.SystemColors.Window;
             this.TodoListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TodoListView.HideSelection = false;
-            this.TodoListView.Location = new System.Drawing.Point(110, 12);
+            this.TodoListView.Location = new System.Drawing.Point(152, 18);
             this.TodoListView.Name = "TodoListView";
             this.TodoListView.Size = new System.Drawing.Size(666, 510);
             this.TodoListView.TabIndex = 10;
             this.TodoListView.UseCompatibleStateImageBehavior = false;
             this.TodoListView.View = System.Windows.Forms.View.Details;
+            // 
+            // BT_Display
+            // 
+            this.BT_Display.BackColor = System.Drawing.Color.Ivory;
+            this.BT_Display.Font = new System.Drawing.Font("MS UI Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.BT_Display.Location = new System.Drawing.Point(543, 563);
+            this.BT_Display.Name = "BT_Display";
+            this.BT_Display.Size = new System.Drawing.Size(224, 53);
+            this.BT_Display.TabIndex = 8;
+            this.BT_Display.Text = "完了したToDoを表示しない\r\n";
+            this.BT_Display.UseVisualStyleBackColor = false;
+            this.BT_Display.Click += new System.EventHandler(this.DisplayButtonClicked);
             // 
             // ToDoList
             // 
@@ -164,6 +177,7 @@
             this.BackgroundImage = global::PPF_TodoApplication.Properties.Resources.pultiyPAKU7217_TP_V4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(978, 745);
+            this.Controls.Add(this.BT_Display);
             this.Controls.Add(this.TodoListView);
             this.Controls.Add(this.TM_LimitDay);
             this.Controls.Add(this.BT_Save);
@@ -196,6 +210,7 @@
         private TodoDateSet todoDateSet;
         private System.Windows.Forms.BindingSource todoDateTableBindingSource;
         private System.Windows.Forms.ListView TodoListView;
+        private System.Windows.Forms.Button BT_Display;
     }
 }
 
