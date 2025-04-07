@@ -78,16 +78,16 @@ namespace PPF_TodoApplication
                 listItem.SubItems.Add(item.Todo);
 
 
-                if (isDisplayed && item.IsCompleted)   //表示かつ完了
+                if (item.IsCompleted)   //表示かつ完了
                 {
                     //ここで取り消し線の処理を行う
-                    TodoListView.ForeColor = Color.LightGray;
-                    TodoListView.Font = new Font(TodoListView.Font, FontStyle.Strikeout);
+                    listItem.ForeColor = Color.LightGray;
+                    listItem.Font = new Font(TodoListView.Font, FontStyle.Strikeout);
                 }
                 else
                 {
-                    TodoListView.ForeColor = Color.Black;
-                    TodoListView.Font = new Font(TodoListView.Font, FontStyle.Regular);
+                    listItem.ForeColor = Color.Black;
+                    listItem.Font = new Font(TodoListView.Font, FontStyle.Regular);
                 }
 
                 listItem.Tag = item;    //Tagにitemを保持させる
@@ -195,32 +195,35 @@ namespace PPF_TodoApplication
         }
 
         /// <summary>
-        /// リストのチェックボックスの状態を管理するイベント
+        /// リストのチェックボックスの状態を管理しUIを変更する
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CheckListViewItem(object sender, ItemCheckEventArgs e)
         {
             // クリックしたアイテムのインデックスを取得
-            int index = e.Index;
+            var item = TodoListView.Items[e.Index];
+            var todo = (TodoItem)item.Tag;
+
             bool isChecked = e.NewValue == CheckState.Checked;
+            todo.IsCompleted = isChecked;
 
             // todoListの該当アイテムを更新
-            todoList[index].IsCompleted = isChecked;
+            todoList[e.Index].IsCompleted = isChecked;
 
             //ここで取り消し線の処理を行う
             if (isChecked)  //完了状態の場合
             { 
-                TodoListView.Items[index].ForeColor = Color.LightGray;
-                TodoListView.Items[index].Font = new Font(TodoListView.Font, FontStyle.Strikeout);
+                item.ForeColor = Color.LightGray;
+                item.Font = new Font(TodoListView.Font, FontStyle.Strikeout);
             }
             else //未完了の場合
             {
-                TodoListView.Items[index].ForeColor = Color.Black;
-                TodoListView.Items[index].Font = new Font(TodoListView.Font, FontStyle.Regular);
+                item.ForeColor = Color.Black;
+                item.Font = new Font(TodoListView.Font, FontStyle.Regular);
             }
 
-            Console.WriteLine("選択した列番号：　" + index);
+            Console.WriteLine("選択した列番号：　" + e.Index);
             Console.WriteLine("完了：　" + isChecked);
         }
 

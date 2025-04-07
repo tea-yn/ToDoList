@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:ppf_todoapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:PPF_TodoApplication\\TodoItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\ppf_todoapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:ppf_todoapplication\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|solutionrelative:PPF_TodoApplication\\TodoItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51EF3F16-F0F6-4104-AB20-5AB0CDC0BF82}|PPF_TodoApplication\\PPF_TodoApplication.csproj|C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "PPF_TodoApplication\\Form1.cs",
               "ToolTip": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs",
               "RelativeToolTip": "PPF_TodoApplication\\Form1.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFwAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAAAM0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T08:12:43.251Z",
               "IsPinned": true,
@@ -64,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "TodoItem.cs",
               "DocumentMoniker": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\TodoItem.cs",
               "RelativeDocumentMoniker": "PPF_TodoApplication\\TodoItem.cs",
@@ -72,8 +72,7 @@
               "RelativeToolTip": "PPF_TodoApplication\\TodoItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T07:31:11.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T07:31:11.505Z"
             },
             {
               "$type": "Document",
@@ -100,15 +99,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs",
               "RelativeDocumentMoniker": "PPF_TodoApplication\\Form1.cs",
               "ToolTip": "C:\\creative\\Git\\github\\TodoList\\PPF_TodoApplication\\PPF_TodoApplication\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
               "RelativeToolTip": "PPF_TodoApplication\\Form1.cs [\u30C7\u30B6\u30A4\u30F3]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T05:52:36.157Z",
-              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+              "WhenOpened": "2025-04-02T05:52:36.157Z"
             },
             {
               "$type": "Document",
@@ -132,8 +130,7 @@
               "RelativeToolTip": "PPF_TodoApplication\\Form1.Designer.cs",
               "ViewState": "AgIAAJAAAAAAAAAAAAAwwKoAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T08:31:07.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T08:31:07.047Z"
             }
           ]
         }
