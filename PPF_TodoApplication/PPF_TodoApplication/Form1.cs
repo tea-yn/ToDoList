@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.Json;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Reflection;
 
 namespace PPF_TodoApplication
 {
@@ -44,11 +45,12 @@ namespace PPF_TodoApplication
         private void SetupListView()
         {
             TodoListView.View = View.Details;   //表形式
+            TodoListView.FullRowSelect = true;      // 行全体を選択対象にする
+            TodoListView.CheckBoxes = true; //チェックボックスを表示する
             TodoListView.Columns.Add("完了",-2,HorizontalAlignment.Center);
             TodoListView.Columns.Add("期限", 150, HorizontalAlignment.Center);
             TodoListView.Columns.Add("すること", 300, HorizontalAlignment.Center);
-            TodoListView.FullRowSelect = true;      // 行全体を選択対象にする
-            TodoListView.CheckBoxes = true; //チェックボックスを表示する
+           
             TodoListView.ItemCheck += CheckListViewItem;
         }
 
@@ -60,11 +62,27 @@ namespace PPF_TodoApplication
             TodoListView.Items.Clear(); //初期化しておく
             foreach (var item in todoList)
             {
-                var listItem = new ListViewItem(item.IsCompleted ? "" : "");
+                var listItem = new ListViewItem("");
+                listItem.Checked = item.IsCompleted;
                 listItem.SubItems.Add(item.LimitDay.ToShortDateString());
                 listItem.SubItems.Add(item.Todo);
+
+                
+                if (item.IsCompleted)
+                {
+                    //ここで取り消し線の処理を行う
+                    TodoListView.ForeColor = Color.LightGray;
+                    TodoListView.Font = new Font(TodoListView.Font, FontStyle.Strikeout);
+                }else
+                {
+                    TodoListView.ForeColor = Color.Black;
+                    TodoListView.Font = new Font(TodoListView.Font, FontStyle.Regular);
+                }
+
+                //ListViewにTodoListの内容を反映
                 TodoListView.Items.Add(listItem);
             }
+            
         }
 
         /// <summary>
@@ -88,6 +106,7 @@ namespace PPF_TodoApplication
             Console.WriteLine("FilePath: " + path);
             Console.WriteLine("期限: " + newItem.LimitDay);
             Console.WriteLine("やること: " + newItem.Todo);
+            Console.WriteLine("完了: " + newItem.IsCompleted);
         }
 
         /// <summary>
@@ -175,12 +194,28 @@ namespace PPF_TodoApplication
 
             // todoListの該当アイテムを更新
             todoList[index].IsCompleted = isChecked;
+
+            //ここで取り消し線の処理を行う
+            /*
+            var listViewItem = TodoListView.Items[index];
+
+            Font currentFont = listViewItem.SubItems[2].Font; 
+            Font newFont = new Font(currentFont, isChecked ? FontStyle.Strikeout : FontStyle.Regular);
+            listViewItem.SubItems[2].Font = newFont;
+            */
+            if (isChecked)  //完了状態の場合
+            { 
+                TodoListView.Items[index].ForeColor = Color.LightGray;
+                TodoListView.Items[index].Font = new Font(TodoListView.Font, FontStyle.Strikeout);
+            }
+            else //未完了の場合
+            {
+                TodoListView.Items[index].ForeColor = Color.Black;
+                TodoListView.Items[index].Font = new Font(TodoListView.Font, FontStyle.Regular);
+            }
+
             Console.WriteLine("選択した列番号：　" + index);
-            Console.WriteLine("チェック状態：　" + isChecked);
-
-            //ここでチェックしたら取り消し線を付ける
-
-            UpdateListView();   //リストUI更新
+            Console.WriteLine("完了：　" + isChecked);
         }
     }
 }
